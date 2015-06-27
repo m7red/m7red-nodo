@@ -1,0 +1,9 @@
+.DS_Store
+id_rsa*
+sftp-config*
+sftp-config.json
+sftp-config-staging.json
+sftp-config-prod.json
+sftp.json
+ftp.json
+

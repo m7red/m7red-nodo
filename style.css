@@ -1,0 +1,549 @@
+/*
+    Theme Name: m7red-nodo
+    Theme URI:
+    Description: m7red es un grupo de investigaci&oacute;n y activismo independiente enfocado en la descripci&oacute;n y traducci&oacute;n colectivas de escenarios urbanos complejos. Y una iniciativa de Mauricio Corbalan y Pio Torroja que comenz&oacute; en Buenos Aires el a&ntilde;o 2005.
+    Author: <a href="mailto:corbalan.mauricio@gmail.com">Mauricio Corbalan</a>&nbsp;y&nbsp;<a href="mailto:piotorroja@gmail.com">Pio Torroja</a>
+    Author URI: http://www.m7red.info
+    Version: 2015.06.27
+    Template: imbalance2
+    License: GPL-2.0+
+    License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+@import url("../imbalance2/style.css");
+
+/*  Theme customization starts here
+    We do not touch imbalance2 original style sheet coding.
+    Insteed we overwrite it here - if necessary only.
+-------------------------------------------------------------- */
+@charset 'UTF-8';
+
+/**
+ * Ligature Symbols Web font
+ * by Kazuyuki Motoyama (kudakurage)
+ * http://kudakurage.com/ligature_symbols/
+ * This Font is licensed under the SIL Open Font License for download and using.
+ * http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+ */
+@font-face {
+  font-family: 'LigatureSymbols';
+  src: url('fonts/LigatureSymbols-2.11.eot');
+  src: url('fonts/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
+       url('fonts/LigatureSymbols-2.11.woff') format('woff'),
+       url('fonts/LigatureSymbols-2.11.ttf') format('truetype'),
+       url('fonts/LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.lsf {
+  font-family: 'LigatureSymbols';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.lsf-icon:before {
+  content:attr(title);
+  margin-right:0.3em;
+  font-size:130%;
+  font-family: 'LigatureSymbols';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+html, body, form, ul, li, table, td { margin: 0; padding: 0; }
+body { position: relative; color: #333; }
+body, input, textarea { font-size: 13px; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+a img { border: 0; }
+td { vertical-align: top; }
+ul { list-style-position: inside; }
+h1 { font-size: 24px; }
+h2 { font-size: 18px; }
+h3 { font-size: 12px; }
+blockquote { border-left-width: 3px; border-left-style: solid; margin-left: 7px; padding-left: 20px; font-size: 16px; color: #636363; }
+.clear { clear: both; }
+.main_separator { color: #dedfe0; }
+.wrapper { padding-top: 31px; }
+#header { border-bottom: 1px solid #dedfe0; padding-bottom: 50px; }
+#site-title { float: left; width: 300px; padding-right: 40px; overflow: hidden; line-height: 27px; font-size: 23px; }
+#site-title a { color: #333; font-weight: bold; text-decoration: none; }
+#site-subtitle { float: left; width: 210px; padding-right: 40px; overflow: hidden; line-height: 25px; font-size: 18px; }
+#header-left { float: left; width: 210px; padding-right: 40px; }
+#header-center { float: left; width: 210px; padding-right: 30px; }
+#search { float: right; width: 220px; }
+#header-right { margin: 20px 0 0 10px; }
+#search label, #search input[type=submit] { display: none; }
+#search input[type=text] { width: 200px; padding: 7px 9px; margin: 0; border: 1px solid #dedfe0; background: #fff; font-size: 13px; outline: none; }
+#page_search input[type=submit] { display: none; }
+.menu ul { list-style-type: none; }
+.menu ul li { padding-bottom: 9px; }
+.menu ul a { line-height: 13px; color: #303030; text-decoration: none; }
+#boxes { margin-top: 40px; }
+.box { width: 210px; margin-bottom: 70px; color: #636363; }
+.box .rel { position: relative; }
+.box .rel p { margin: 0; }
+.box .texts { position: absolute; top: -20px; left: -20px; width: 210px; color: #fff; z-index: 200; opacity: 0; filter: alpha(opacity=0); }
+.box .texts .categories a, .box .texts a, .box .texts .posted, .box .texts .posted a { color: #fff; }
+.box .texts .transparent img { opacity: 0.1; filter: alpha(opacity=10); }
+.box .texts .abs { position: absolute; top: 0; }
+.box .categories { padding-bottom: 10px; }
+.box .categories a, .box .posted a { color: #a1a1a1; }
+.box h1 { margin: 0; padding-bottom: 10px; font-size: 16px; }
+.box h1 a { color: #333; }
+.box .posted { padding-top: 10px; color: #a1a1a1; }
+.box img { display: block; }
+.fetch { clear: both; width: 460px; margin: 0 auto 40px; background: #f9f9f9; -moz-border-radius: 4px; border-radius: 4px; text-align: center; }
+.fetch a { display: block; height: 40px; line-height: 40px; font-size: 16px; font-weight: bold; color: #333; text-decoration: none; }
+.fetch:hover a { color: #fff; }
+#content { padding-bottom: 20px; }
+#nav-above { float: left; width: 210px; padding-right: 40px; text-align: right; color: #636363; }
+#nav-above a { text-decoration: none; color: #333; }
+.nav-previous, .nav-next { display: inline; }
+.nav-separator { color: #e5e5e5; }
+.post_title { margin-top: 35px; overflow: hidden; }
+.post_title h1 { margin: 0 0 10px 250px; font-size: 27px; line-height: 35px; width: 710px; }
+.entry-title, .page-title { margin-left: 250px; margin-top: 35px; }
+.entry-meta { margin-left: 250px; padding-bottom: 30px; color: #636363; }
+.entry-meta a { color: #333; text-decoration: none; }
+#wides { clear: both; }
+.entry-aside { width: 210px; padding-right: 40px; vertical-align: middle; }
+.entry-content-right { width: 710px; font-size: 15px; line-height: 21px; }
+.entry-content { width: 710px; margin-left: 250px; font-size: 15px; line-height: 21px; }
+.entry-utility { padding: 10px 0; }
+.entry-tags { margin: 10px 0; }
+.entry-tags span { font-weight: bolder; }
+#social { padding: 20px 0 0 0; }
+.twitter-share-button { float: left; margin: 2px 20px 0 0; }
+.post img, .page img { margin: 20px 0; }
+.post .alignleft, .page .alignleft { float: left; margin-right: 20px; }
+.post .alignright, .page .alignright { float: right; margin-left: 20px; }
+.post .aligncenter, .page .aligncenter { display: block; clear: both; margin: 20px auto; }
+#comments { padding: 0 0 0 246px; width: 714px; }
+#comments-title { font-size: 21px; margin: 40px 0 20px 4px; }
+.commentlist { margin: 0; padding: 0; list-style: none; }
+.commentlist ul.children { list-style: none; }
+.commentlist li > div { position: relative; border-bottom: 1px solid #dedfe0; padding: 30px 0 30px 4px; }
+.commentlist li li > div { margin-left: 90px; }
+.commentlist li li li > div { margin-left: 180px; }
+.commentlist li li li li > div { margin-left: 270px; }
+.commentlist li li li li li > div { margin-left: 360px; }
+.comment-avatar { position: absolute; top: 30px; left: -96px; }
+.comment-content { margin-left: 96px; border-bottom: 1px solid #dedfe0; }
+.comment-author { float: left; width: 210px; padding-right: 40px; font-size: 15px; }
+cite { font-style: normal; font-weight: bold; }
+.comment-meta { float: left; width: 210px; padding-right: 40px; color: #999999; }
+.comment-body { clear: both; padding-top: 7px; font-size: 15px; line-height: 21px; }
+#respond { padding-left: 4px; }
+li.comment > div { position: relative; }
+.reply { position: absolute; top: 30px; right: 20px; }
+#reply-title { font-size: 21px; }
+.comment-reply-link { display: none; }
+.comment-form-author, .comment-form-email, .comment-form-url { float: left; width: 460px; margin: 0; padding: 10px 0; }
+.comment-form-comment { clear: both; width: 460px; margin: 0; padding: 10px 0; }
+input[type="text"], textarea { background: #fff; border: 1px solid #ccc; padding: 8px; outline: none; color: #6b6b6b; -moz-border-radius: 4px; border-radius: 4px; }
+#comments input[type="text"] { width: 442px; }
+#comments textarea { width: 442px; }
+.form-submit { margin-bottom: 40px; }
+.form-submit input { width: 460px; padding: 6px 0; color: #fff; font-size: 15px; font-weight: bold; cursor: pointer; border: 0; text-align: center; -moz-border-radius: 4px; border-radius: 4px; }
+.recent { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ccc; }
+#footer { padding: 30px 0 50px; border-top: 1px solid #dedfe0; }
+#site-info { float: left; width: 460px; padding-right: 40px; line-height: 22px; }
+#site-info a { font-weight: bold; text-decoration: none; color: #333; }
+#footer-left { float: right; width: 210px; padding-right: 40px; }
+#footer-right { float: right; width: 210px; }
+#infscr-loading { background: none repeat scroll 0 0 #000000; bottom: 40px; color: #FFFFFF; height: 100px; left: 40%; opacity: 0.8; padding: 10px; position: fixed; width: 200px; z-index: 5000; border-radius: 10px; }
+/*
+    <<< end-include imbalance2 stylesheet
+--------------------------------------------------------------*/
+
+body,
+input,
+textarea,
+.author-box h1 {
+    font-family: 'Arial', arial, Helvetica, Tahoma, Verdana, sans-serif !important;
+}
+
+/* Menu 'header-right' used for categories. */
+#header-right {
+    margin: 10px 0 10px 10px;
+}
+
+#header-left-m7red {
+    float: left;
+    width: 210px;
+    padding-right: 40px;
+    font-size: 13px !important;
+    font-weight: normal !important;
+}
+
+.cat-menu ul {
+    list-style-type: none;
+}
+
+.cat-menu ul li {
+    padding-bottom: 9px;
+    padding-right: 10px;
+    display: inline; /* horizontal list */
+}
+
+.cat-menu ul a {
+    line-height: 13px;
+    color: #303030;
+    text-decoration: none;
+}
+
+.rel-posts ul {
+    list-style-type: none;
+}
+
+.rel-posts ul a {
+    list-style-type: none;
+}
+
+.related_posts {
+    width: 640px;
+    margin: 5px 0 20px 0;
+    float: left;
+    font-size: 12px;
+}
+
+.related_posts h3 {
+    font-size: 12px;
+    margin: 5px 5px 5px 5px;
+}
+
+.related_posts ul {
+    list-style-type: none;
+}
+
+.related_posts ul li {
+    margin: 0 0 20px 0;
+}
+
+.related_content {
+    color: #000000;
+}
+.related_content a {
+    color: #303030;
+    text-decoration: none;
+}
+
+.related_content a:hover {
+    color: #d1492e;
+    text-decoration: none;
+}
+
+.related_thumb {
+    margin: 0 1px 0 1px;
+    float: left;
+}
+
+.related_thumb img {
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+.related_thumb a {
+    color :#333;
+    text-decoration: none;
+    display:block;
+    padding: 4px;
+    width: 150px;
+}
+
+.relatedvthumb a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+/* d3 */
+/*.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+*/
+.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+.node circle {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/*  Node (cirle) textlabel */
+.node-textlabel {
+    pointer-events: none;
+    font-size: 10px;
+    font-weight: normal;
+    color: #000000;
+}
+
+ /* sigma.js context : */
+/*
+  .sigma-parent {
+    position: relative;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: #e5e5e5;
+    height: 400px;
+    width: 90%;
+    margin: 0 auto;
+  }
+ */
+
+  .sigma-expand {
+    position: absolute;
+/*    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+*/  }
+
+ div.wrapper {
+    width: 960px ;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+/*  position: relative; */
+}
+
+#graph_container {
+    position: relative;
+    margin: auto;
+    background: #ffffff;
+    height: 400px;
+    width: 100%;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+
+/*  h2 {
+    color: rgb(22, 22, 22);
+    font: 400 58px/58px "old standard tt";
+    margin: 16px 0px 16px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+*/
+}
+  h2.small {
+    font-size: 18px;
+}
+  a {
+      text-decoration: none;
+}
+
+.info {
+    -moz-column-count: 3;
+    -moz-column-gap: 30px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 30px;
+    color: rgb(51, 51, 51);
+    font: 400 14px/22px "merriweather";
+    width: 90%;
+    margin: 20px 0 0 5%;
+
+}
+  .footer {
+    color: rgb(22, 22, 22);
+    font: italic 400 14px/21px "old standard tt";
+    margin: 30px 0px;
+    text-align: center;
+}
+  .share {
+    margin: 20px auto 0px;
+    width: 230px;
+    text-align: center;
+}
+  .twitter-share-button {
+/*     margin: 10px 0 0 15px; */
+    margin: 0 0 0 15px;
+  }
+  .fb-follow {
+      padding-right: 5px;
+  }
+  .FlattrButton {
+      padding: 0 0 2px 3px;
+  }
+
+.tooltip {
+    top: 0;
+    left: 0;
+    display:none;
+    position:absolute;
+    padding:12px;
+    width: 250px;
+    background-color:#505050;
+    opacity:.7;
+    color: #ffffff;
+    font-size:12px Arial;
+    border:1px solid #333;
+    border-radius:5px;
+}
+
+/* Tooltip styles for d3 graphics. */
+.d3-tip {
+    position: absolute;
+/*
+    top: 80px;
+    left: 25px;
+ */
+    top: 147px !important;
+    left: 111px !important;
+    padding: 12px;
+    background-color: #505050;
+    opacity: .5;
+    color: #ffffff;
+    font-size:12px Arial;
+    border:1px solid #333;
+    border-radius: 5px;
+    z-index: 999999;
+}
+
+/* Creates a small triangle extender for the tooltip */
+/*.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 250px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+*/
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+/*
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+ */
+}
+
+/* Category colored circles used in menu. */
+.cat_circle {
+    width: 10px;
+    height: 10px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #4679BD;
+}
+
+/* Button 'clean-gray'
+    Please set 'width' seperately via style in html-tag.
+--------------------------------------------------------------*/
+button.clean-gray {
+    background-color: #eeeeee;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+    background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: linear-gradient(top, #eeeeee, #cccccc);
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #bbb;
+    border-radius: 3px;
+    color: #333;
+    font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    padding: 5px 0;
+    text-align: center;
+    text-shadow: 0 1px 0 #eee;
+/*  width: 120px;
+*/
+}
+button.clean-gray:hover {
+    background-color: #dddddd;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
+    background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: linear-gradient(top, #dddddd, #bbbbbb);
+    border: 1px solid #bbb;
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #ddd;
+}
+
+button.clean-gray:active {
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #888;
+    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+}
+
+/* Related posts content styles (frontend)
+--------------------------------------------------------------*/
+.related-posts ul {
+    margin: 5px 0 32px 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    float: left;
+    clear: both;
+}
+
+.related-posts li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    clear: left;
+}
+
+.related-posts img {
+    margin: 0 0.5em 0.5em 0;
+    float: left;
+}
+
+/* Left side header part.
+ * Hint: #site-title defined further above sets total width.
+ */
+#m7red-header-logo {
+    width: 58px;
+    height: 50px;
+}
+
+.m7red-header-bloginfo-left {
+  float: left;
+  width: 58px !important;
+}
+
+.m7red-header-bloginfo-right {
+  float: left;
+  width: 210px !important;
+  background: none !important;
+}

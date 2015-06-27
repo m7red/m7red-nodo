@@ -1,0 +1,1072 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: m7red v0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-17 10:41+0100\n"
+"PO-Revision-Date: 2015-04-17 10:45+0100\n"
+"Last-Translator: andrece <andreas.hempfling@gmail.com>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ m7red
+# @ imbalance2
+#: category.php:10
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+# @ m7red
+#: functions.php:385
+#, php-format
+msgid "<span class=\"meta-sep\">por</span> %1$s"
+msgstr "<span class=\"meta-sep\">por</span> %1$s"
+
+# @ m7red
+# @ imbalance2
+#: functions.php:396
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+# @ m7red
+# @ imbalance2
+#: functions.php:398
+#, php-format
+msgid ""
+"Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+"Marca el <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark"
+"\">enlace permanente</a>."
+
+#: functions.php:454
+msgid "m7red espec&iacute;fico"
+msgstr "m7red espec&iacute;fico"
+
+# @ m7red
+#: functions.php:462
+msgid "Eslogan"
+msgstr "Eslogan"
+
+#: functions.php:463
+msgid "T&iacute;tulo de entrada para la visualizaci&oacute;n gr&aacute;fica."
+msgstr "T&iacute;tulo de entrada para la visualizaci&oacute;n gr&aacute;fica."
+
+# @ default
+#: functions.php:478 functions.php:505
+msgid "Color del nodo"
+msgstr "Color del nodo"
+
+#: functions.php:480 functions.php:509
+msgid ""
+"Color de la categor&iacute;a para la visualizaci&oacute;n gr&aacute;fica. "
+"Introducci&oacute;n manual es hexadecimal, por ejemplo #FF0000 es un tono de "
+"rojo."
+msgstr ""
+"Color de la categor&iacute;a para la visualizaci&oacute;n gr&aacute;fica. "
+"Introducci&oacute;n manual es hexadecimal, por ejemplo #FF0000 es un tono de "
+"rojo."
+
+#: functions.php:484 functions.php:515
+msgid "Tama&ntilde;o del nodo"
+msgstr "Tama&ntilde;o del nodo"
+
+#: functions.php:496
+msgid ""
+"Seleccione el tama&ntilde;o en p&iacute;xeles que desea. Nodos se visualizan "
+"como c&iacute;rculos."
+msgstr ""
+"Seleccione el tama&ntilde;o en p&iacute;xeles que desea. Nodos se visualizan "
+"como c&iacute;rculos."
+
+# @ default
+#: functions.php:531
+msgid ""
+"Seleccione el tamaño en píxeles que desea. Nodos se visualizan como círculos."
+msgstr ""
+"Seleccione el tamaño en píxeles que desea. Nodos se visualizan como círculos."
+
+# @ default
+#: functions.php:596
+#, php-format
+msgid "Ver todas las entradas por %s"
+msgstr "Ver todas las entradas por %s"
+
+# @ default
+#: functions.php:607
+#, php-format
+msgid "Ver todas las entradas en %s"
+msgstr "Ver todas las entradas en %s"
+
+# @ m7red
+#: functions.php:1106
+msgid "Entradas relacionadas"
+msgstr "Entradas relacionadas"
+
+# @ default
+# @ m7red
+#: functions.php:1216 lib/related_posts_widget.php:93
+msgid "Posts"
+msgstr "Entradas"
+
+# @ m7red
+#: functions.php:1265
+msgid "relacionadas"
+msgstr "relacionadas"
+
+# @ m7red
+#: functions.php:1279 functions.php:1283
+msgid ""
+"Utilice el buscador de abajo para seleccionar las entradas relacionadas."
+msgstr ""
+"Utilice el buscador de abajo para seleccionar las entradas relacionadas."
+
+# @ m7red
+#: functions.php:1288
+msgid "buscar entradas"
+msgstr "buscar entradas"
+
+#: functions.php:1289
+msgid "t&iacute;tulo"
+msgstr "t&iacute;tulo"
+
+# @ m7red
+#: functions.php:1289
+msgid "contenido"
+msgstr "contenido"
+
+# @ m7red
+#: functions.php:1289
+msgid "ambos"
+msgstr "ambos"
+
+# @ m7red
+# @ imbalance2
+#: header.php:14
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+# @ cmb
+#: lib/metabox/example-functions.php:25
+msgid "Test Metabox"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:33 lib/metabox/example-functions.php:263
+msgid "Test Text"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:34 lib/metabox/example-functions.php:44
+#: lib/metabox/example-functions.php:51 lib/metabox/example-functions.php:58
+#: lib/metabox/example-functions.php:66 lib/metabox/example-functions.php:73
+#: lib/metabox/example-functions.php:85 lib/metabox/example-functions.php:91
+#: lib/metabox/example-functions.php:98 lib/metabox/example-functions.php:113
+#: lib/metabox/example-functions.php:121 lib/metabox/example-functions.php:128
+#: lib/metabox/example-functions.php:134 lib/metabox/example-functions.php:140
+#: lib/metabox/example-functions.php:152 lib/metabox/example-functions.php:163
+#: lib/metabox/example-functions.php:174 lib/metabox/example-functions.php:185
+#: lib/metabox/example-functions.php:193 lib/metabox/example-functions.php:200
+#: lib/metabox/example-functions.php:208 lib/metabox/example-functions.php:214
+#: lib/metabox/example-functions.php:226 lib/metabox/example-functions.php:264
+#: lib/metabox/example-functions.php:283 lib/metabox/example-functions.php:290
+#: lib/metabox/example-functions.php:297 lib/metabox/example-functions.php:303
+#: lib/metabox/example-functions.php:309 lib/metabox/example-functions.php:315
+#: lib/metabox/example-functions.php:321 lib/metabox/example-functions.php:338
+msgid "field description (optional)"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:43
+msgid "Test Text Small"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:50
+msgid "Test Text Medium"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:57
+msgid "Website URL"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:65
+msgid "Test Text Email"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:72
+msgid "Test Time"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:78 lib/metabox/example-functions.php:79
+msgid "Time zone"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:84
+msgid "Test Date Picker"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:90
+msgid "Test Date Picker (UNIX timestamp)"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:97
+msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:112
+msgid "Test Money"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:120
+msgid "Test Color Picker"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:127
+msgid "Test Text Area"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:133
+msgid "Test Text Area Small"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:139
+msgid "Test Text Area for Code"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:145
+msgid "Test Title Weeeee"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:146
+msgid "This is a title description"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:151
+msgid "Test Select"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:156 lib/metabox/example-functions.php:167
+#: lib/metabox/example-functions.php:178
+msgid "Option One"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:157 lib/metabox/example-functions.php:168
+#: lib/metabox/example-functions.php:179
+msgid "Option Two"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:158 lib/metabox/example-functions.php:169
+#: lib/metabox/example-functions.php:180
+msgid "Option Three"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:162
+msgid "Test Radio inline"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:173
+msgid "Test Radio"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:184
+msgid "Test Taxonomy Radio"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:192
+msgid "Test Taxonomy Select"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:199
+msgid "Test Taxonomy Multi Checkbox"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:207
+msgid "Test Checkbox"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:213
+msgid "Test Multi Checkbox"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:218
+msgid "Check One"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:219
+msgid "Check Two"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:220
+msgid "Check Three"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:225
+msgid "Test wysiwyg"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:232
+msgid "Test Image"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:233
+msgid "Upload an image or enter a URL."
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:238
+msgid "Multiple Files"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:239
+msgid "Upload or add multiple images/attachments."
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:245
+msgid "oEmbed"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:246
+msgid ""
+"Enter a youtube, twitter, or instagram URL. Supports services listed at <a "
+"href=\"http://codex.wordpress.org/Embeds\">http://codex.wordpress.org/"
+"Embeds</a>."
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:255
+msgid "About Page Metabox"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:276
+msgid "User Profile Metabox"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:282
+msgid "Extra Info"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:289
+msgid "Avatar"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:296
+msgid "Facebook URL"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:302
+msgid "Twitter URL"
+msgstr "Twitter URL"
+
+# @ cmb
+#: lib/metabox/example-functions.php:308
+msgid "Google+ URL"
+msgstr "Google+ URL"
+
+# @ cmb
+#: lib/metabox/example-functions.php:314
+msgid "Linkedin URL"
+msgstr "Linkedin URL"
+
+# @ cmb
+#: lib/metabox/example-functions.php:320
+msgid "User Field"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:333
+msgid "Theme Options Metabox"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/example-functions.php:337
+msgid "Site Background Color"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/helpers/cmb_Meta_Box_ajax.php:47
+msgid "Please Try Again"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/helpers/cmb_Meta_Box_ajax.php:131
+msgid "Remove Embed"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/helpers/cmb_Meta_Box_ajax.php:134
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:150
+msgid "Add Row"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:178
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:547
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:590
+msgid "Remove"
+msgstr "Eliminar"
+
+# @ cmb
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:523
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:563
+msgid "Add or Upload File"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:536
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:582
+msgid "Remove Image"
+msgstr "Eliminar imagen"
+
+# @ cmb
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:547
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:590
+msgid "File:"
+msgstr "Archivo:"
+
+# @ cmb
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:547
+#: lib/metabox/helpers/cmb_Meta_Box_types.php:590
+msgid "Download"
+msgstr ""
+
+# @ default
+#: lib/metabox/init.php:243
+msgid "Clear"
+msgstr ""
+
+# @ default
+#: lib/metabox/init.php:244
+msgid "Default"
+msgstr "defecto"
+
+# @ default
+#: lib/metabox/init.php:245
+msgid "Select Color"
+msgstr ""
+
+# @ default
+#: lib/metabox/init.php:246
+msgid "Current Color"
+msgstr ""
+
+# @ cmb
+#: lib/metabox/init.php:1185
+msgid "Save"
+msgstr "guardar"
+
+# @ m7red
+#: lib/related_posts_widget.php:8
+msgid "Display related posts as a widget"
+msgstr ""
+
+# @ m7red
+#: lib/related_posts_widget.php:9
+msgid "m7red Related Posts"
+msgstr "m7red entradas relacionadas"
+
+# @ m7red
+#: lib/related_posts_widget.php:79
+msgid "m7red Related posts"
+msgstr "m7red entradas relacionadas"
+
+# @ m7red
+#: lib/related_posts_widget.php:79
+msgid "None"
+msgstr "ninguno"
+
+# @ default
+#: lib/related_posts_widget.php:88
+msgid "Title:"
+msgstr "Título:"
+
+# @ m7red
+#: lib/related_posts_widget.php:89
+msgid "Post type to display:"
+msgstr ""
+
+# @ m7red
+#: lib/related_posts_widget.php:92
+msgid "All"
+msgstr "Todo"
+
+# @ m7red
+#: lib/related_posts_widget.php:94
+msgid "Pages"
+msgstr "Páginas"
+
+# @ m7red
+#: lib/related_posts_widget.php:100
+msgid "If there are no related posts:"
+msgstr ""
+
+# @ m7red
+#: lib/related_posts_widget.php:101
+msgid "Hide the entire widget"
+msgstr ""
+
+# @ m7red
+#: lib/related_posts_widget.php:102
+msgid "Show this text:"
+msgstr ""
+
+# @ default
+#: lib/related_posts_widget.php:104
+msgid "Display thumbnail with related posts:"
+msgstr ""
+
+# @ m7red
+#: lib/related_posts_widget.php:105
+msgid "Show thumbnail"
+msgstr ""
+
+# @ default
+#: lib/related_posts_widget.php:106
+msgid "Thumbnail size:"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: loop-single.php:37
+#, php-format
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ m7red
+# @ imbalance2
+#: loop-single.php:56
+msgid "Pages:"
+msgstr "Páginas:"
+
+# @ m7red
+# @ imbalance2
+#: loop-single.php:68
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: loop-single.php:77
+msgid "Edit"
+msgstr "Editar"
+
+# @ m7red
+# @ imbalance2
+#: loop-single.php:124 loop-single.php:139 loop.php:27 loop.php:42
+msgid "No comments"
+msgstr "no hay comentarios"
+
+# @ m7red
+#: loop-single.php:124 loop-single.php:139 loop.php:27 loop.php:42
+msgid "One comment"
+msgstr "un comentario"
+
+# @ m7red
+#: loop-single.php:124 loop-single.php:139 loop.php:27 loop.php:42
+#, php-format
+msgid "% comments"
+msgstr "% comentarios"
+
+# @ m7red
+# @ imbalance2
+#: loop.php:6
+msgid "Not Found"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: loop.php:8
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: loop.php:56 loop.php:90
+msgid "Load more posts"
+msgstr ""
+
+#: options.php:40
+msgid " Configuración (ahora sólo disponible en inglés)"
+msgstr ""
+
+# @ default
+#: options.php:45
+msgid ""
+"Various settings and modes for textual and visual representation of related "
+"posts."
+msgstr ""
+
+#: options.php:50
+msgid "Textual Representation"
+msgstr ""
+
+# @ m7red
+#: options.php:55
+msgid ""
+"Should related posts be reciprocal? If so, the link will appear on both "
+"pages. If not, it will only appear on the post/page where it was selected."
+msgstr ""
+
+# @ m7red
+#: options.php:61
+msgid "Yes, include the link on both pages."
+msgstr ""
+
+# @ m7red
+#: options.php:67
+msgid "No, only show the link on one page."
+msgstr ""
+
+# @ m7red
+#: options.php:73
+msgid "What title for related posts should be displayed?"
+msgstr ""
+
+# @ m7red
+#: options.php:79
+msgid "Using HTML header element"
+msgstr ""
+
+# @ m7red
+#: options.php:95
+msgid ""
+"<strong>Note:</strong> if you choose to display different post types as "
+"seperate lists, you can place <strong>%posttype%</strong> in the title to "
+"display the label of the post type."
+msgstr ""
+
+# @ m7red
+#: options.php:100
+msgid "What should be displayed when there are no related posts?"
+msgstr ""
+
+# @ m7red
+#: options.php:106
+msgid "Nothing"
+msgstr "nada"
+
+# @ m7red
+#: options.php:112
+msgid "Show this text"
+msgstr ""
+
+# @ m7red
+#: options.php:119
+msgid "Would you like to display thumbnails with your related posts?"
+msgstr ""
+
+# @ m7red
+#: options.php:126
+msgid "Yes, display thumbnails with this size:"
+msgstr ""
+
+# @ m7red
+#: options.php:141
+msgid "No"
+msgstr "No"
+
+# @ m7red
+#: options.php:152
+msgid "How would you like to order your related posts?"
+msgstr ""
+
+# @ m7red
+#: options.php:159
+msgid "Manually"
+msgstr ""
+
+# @ m7red
+#: options.php:165
+msgid "Automatically"
+msgstr "automáticamente"
+
+# @ m7red
+#: options.php:170
+msgid "by date, new to old"
+msgstr ""
+
+# @ m7red
+#: options.php:174
+msgid "by date, old to new"
+msgstr ""
+
+# @ m7red
+#: options.php:178
+msgid "alphabetically A→Z"
+msgstr ""
+
+# @ m7red
+#: options.php:182
+msgid "alphabetically Z→A"
+msgstr ""
+
+# @ m7red
+#: options.php:186
+msgid "randomly"
+msgstr ""
+
+#: options.php:193
+msgid "Visual Representation"
+msgstr ""
+
+# @ nsur
+#: options.php:198
+msgid ""
+"Initalize graphics zoom factor. This have to be a value between 1 and 3. For "
+"example 1.2 or 1,4 are valid. You can use a dot or a comma as decimal sign. "
+"Default is set by 1."
+msgstr ""
+
+# @ m7red
+#: options.php:206
+msgid "How many posts (maximum number) should be displayed in graphics?"
+msgstr ""
+
+# @ m7red
+#: options.php:212
+msgid "100"
+msgstr "100"
+
+# @ m7red
+#: options.php:218
+msgid "200"
+msgstr "200"
+
+# @ m7red
+#: options.php:224
+msgid "300"
+msgstr "300"
+
+# @ m7red
+#: options.php:230
+msgid "400"
+msgstr "400"
+
+# @ m7red
+#: options.php:236
+msgid "500"
+msgstr "500"
+
+# @ m7red
+#: options.php:242
+msgid "all (This is not recommended and only useful for test purposes.)"
+msgstr ""
+
+# @ m7red
+#: options.php:248
+msgid ""
+"The refresh cycle determines the time intervals in minutes at which a new "
+"file for displaying the graphics is stored."
+msgstr ""
+
+# @ m7red
+#: options.php:254
+msgid "10 min"
+msgstr "10 min"
+
+# @ m7red
+#: options.php:260
+msgid "20 min"
+msgstr "20 min"
+
+# @ m7red
+#: options.php:266
+msgid "30 min"
+msgstr "30 min"
+
+# @ m7red
+#: options.php:272
+msgid "60 min"
+msgstr "600"
+
+# @ m7red
+#: options.php:278
+msgid "always (This is not recommended and only useful for test purposes.)"
+msgstr ""
+
+#: options.php:284
+msgid ""
+"Safety threshold (minimum waiting period) in minutes when a new file shall "
+"be created. If set, it overrides a refresh cycle selection to \"always\" "
+"above."
+msgstr ""
+
+#: options.php:290
+msgid "1 min"
+msgstr "1 min"
+
+#: options.php:296
+msgid "2 min"
+msgstr "2 min"
+
+#: options.php:302
+msgid "3 min"
+msgstr "3 min"
+
+#: options.php:308
+msgid "4 min"
+msgstr "4 min"
+
+#: options.php:314
+msgid "none (This is not recommended and only useful for test purposes.)"
+msgstr ""
+
+# @ m7red
+#: options.php:320
+msgid "Guardar cambios"
+msgstr "Guardar cambios"
+
+# @ m7red
+# @ imbalance2
+#: search.php:10
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: search.php:14
+msgid "Nothing Found"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: search.php:16
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:20
+msgid "Theme Options"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:31
+msgid "Standard"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:35
+msgid "InfiniteScroll"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:42
+msgid "Serif"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:46
+msgid "Sans Serif"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:61
+msgid " Theme Options"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:64
+msgid "Options saved"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:73
+msgid "Navigation"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:91
+msgid "Choose page navigation type"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:95
+msgid "Color"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:106
+msgid "Select theme color"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:110
+msgid "Use images only"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:113
+msgid "For index page and related posts"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:117
+msgid "Related posts"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:120
+msgid "Enable related posts in Single page"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:124
+msgid "Font"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:142
+msgid "Choose font"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:146
+msgid "Google analytics"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:149
+msgid "Enter Google analytics code"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:153
+msgid "Favicon"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:156
+msgid "Enter favicon url, default will be used when value is not set"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:160
+msgid "Fluid grid"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:163
+msgid "Enable fluid grid"
+msgstr ""
+
+# @ m7red
+# @ imbalance2
+#: theme-options.php:170
+msgid "Save Options"
+msgstr "Guardar opciones"
+
+# @ m7red
+# @ imbalance2
+#~ msgid "View all posts by %s"
+#~ msgstr "Ver todas las publicaciones de %s"
+
+# @ m7red
+#~ msgid "m7red específico"
+#~ msgstr "m7red específico"
+
+# @ m7red
+#~ msgid "Título de entrada para la visualización gráfica."
+#~ msgstr "Título de entrada para la visualización gráfica."
+
+# @ default
+#~ msgid ""
+#~ "Color de la categoría para la visualización gráfica. Introducción manual "
+#~ "es hexadecimal, por ejemplo #FF0000 es un tono de rojo."
+#~ msgstr ""
+#~ "Color de la categoría para la visualización gráfica. Introducción manual "
+#~ "es hexadecimal, por ejemplo #FF0000 es un tono de rojo."
+
+# @ default
+#~ msgid "Tamaño del nodo"
+#~ msgstr "Tamaño del nodo"
+
+# @ m7red
+#~ msgid "título"
+#~ msgstr "título"
