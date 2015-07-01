@@ -10,12 +10,10 @@
         </div><!-- .entry-content -->
     </div><!-- #post-0 -->
 <?php endif; ?>
-
 <?php $imbalance2_theme_options = get_option('imbalance2_theme_options') ?>
 
 <div id="boxes">
 <?php while ( have_posts() ) : the_post(); ?>
-
     <div class="box">
         <div class="rel">
             <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('homepage-thumb', array('alt' => '', 'title' => '')) ?></a>
@@ -51,7 +49,6 @@
 
 <?php if ( $wp_query->max_num_pages > 1 ) :
     if ( $imbalance2_theme_options['navigation'] == 0 ) : // Default ?>
-
 <div class="fetch">
     <?php next_posts_link( __( 'Load more posts', 'm7red' ) ); ?>
 </div>
@@ -113,5 +110,4 @@ jQuery(document).ready(function() {
 </script>
 
     <?php endif; ?>
-
-<?php endif; ?>
+<?php endif;

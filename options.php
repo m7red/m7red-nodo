@@ -320,4 +320,4 @@ function m7red_options_page() {
     </p>
   </form>
 </div>
-<?php } ?>
+<?php }

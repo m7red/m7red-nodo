@@ -4,7 +4,7 @@
     Description: m7red es un grupo de investigaci&oacute;n y activismo independiente enfocado en la descripci&oacute;n y traducci&oacute;n colectivas de escenarios urbanos complejos. Y una iniciativa de Mauricio Corbalan y Pio Torroja que comenz&oacute; en Buenos Aires el a&ntilde;o 2005.
     Author: <a href="mailto:corbalan.mauricio@gmail.com">Mauricio Corbalan</a>&nbsp;y&nbsp;<a href="mailto:piotorroja@gmail.com">Pio Torroja</a>
     Author URI: http://www.m7red.info
-    Version: 2015.06.27
+    Version: 2015.07.01
     Template: imbalance2
     License: GPL-2.0+
     License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -121,14 +121,14 @@ blockquote { border-left-width: 3px; border-left-style: solid; margin-left: 7px;
 .post_title { margin-top: 35px; overflow: hidden; }
 .post_title h1 { margin: 0 0 10px 250px; font-size: 27px; line-height: 35px; width: 710px; }
 .entry-title, .page-title { margin-left: 250px; margin-top: 35px; }
-.entry-meta { margin-left: 250px; padding-bottom: 30px; color: #636363; }
+.entry-meta { margin-left: 250px; padding-bottom: 0; color: #636363; }
 .entry-meta a { color: #333; text-decoration: none; }
 #wides { clear: both; }
 .entry-aside { width: 210px; padding-right: 40px; vertical-align: middle; }
 .entry-content-right { width: 710px; font-size: 15px; line-height: 21px; }
 .entry-content { width: 710px; margin-left: 250px; font-size: 15px; line-height: 21px; }
 .entry-utility { padding: 10px 0; }
-.entry-tags { margin: 10px 0; }
+.entry-tags { margin: 1px 0; }
 .entry-tags span { font-weight: bolder; }
 #social { padding: 20px 0 0 0; }
 .twitter-share-button { float: left; margin: 2px 20px 0 0; }
@@ -347,6 +347,44 @@ textarea,
     border: 1px solid #e5e5e5;
 }
 
+.graph-legend-box-regions {
+  height: 155px;
+  margin-top: 0;
+  display: block;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  background: #666666;
+  color: #ffffff;
+}
+
+.graph-legend-box-regions li {
+  margin: 2px 0;
+}
+
+.graph-legend-box-regions ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.graph-legend-box-regions ul a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.graph-legend-box-regions ul a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.graph-legend-box-regions ul a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /*  h2 {
     color: rgb(22, 22, 22);
     font: 400 58px/58px "old standard tt";
@@ -411,15 +449,11 @@ textarea,
     border-radius:5px;
 }
 
-/* Tooltip styles for d3 graphics. */
+/* Tooltip styles for d3 graphics.
+ * Hint: top and left position is set dynamically in nodo-d3.js!
+ */
 .d3-tip {
     position: absolute;
-/*
-    top: 80px;
-    left: 25px;
- */
-    top: 147px !important;
-    left: 111px !important;
     padding: 12px;
     background-color: #505050;
     opacity: .5;

@@ -21,8 +21,7 @@
 
 					get_template_part( 'loop', 'category' );
 				?>
-
 			</div><!-- #content -->
 		</div><!-- #container -->
 
-<?php get_footer(); ?>
+<?php get_footer();

@@ -1,7 +1,6 @@
 <?php
 /** Slight modification: theme original file is overwritten with this copy. */
-?>
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+  if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="post_title" id="is_post">
         <h1 class="entry-title"><?php the_title(); ?></h1>
         <input type="hidden" name="post_id" id="post_id" value="<?php echo get_the_ID(); ?>"/>
@@ -26,7 +25,9 @@
         <div class="entry-meta">
             <div><?php m7red_get_category_post_view() // Category ?></div>
             <div><?php m7red_get_tags_post_view() // Tags ?></div>
-            <div><p><?php m7red_get_short_description_post_view() // Short description ?></p></div>
+<!--
+            <div><p><?php // m7red_get_short_description_post_view() // Short description ?></p></div>
+ -->
             <div>
                 <?php // imbalance2_posted_by() // Author ?>
 <!--
@@ -98,13 +99,10 @@
                 </table><!-- #post-## -->
 
                 <?php comments_template( '', true ); ?>
-
 <?php endwhile; ?>
-
 <?php $imbalance2_theme_options = get_option('imbalance2_theme_options');
     if ( $imbalance2_theme_options['related'] != 0 ) :
 ?>
-
 <div class="recent clear">
     <?php
         $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
@@ -116,11 +114,8 @@
             )
         );
     ?>
-
     <div id="related">
-
     <?php while ( have_posts() ) : the_post(); ?>
-
     <div class="box">
         <div class="rel">
             <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('homepage-thumb', array('alt' => '', 'title' => '')) ?></a>
@@ -151,10 +146,7 @@
         </div>
     </div>
     <?php endwhile ?>
-
     </div>
-
     <?php wp_reset_query(); ?>
 </div>
-
-<?php endif ?>
+<?php endif;

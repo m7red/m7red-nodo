@@ -13,7 +13,7 @@
 
 define( 'M7RED_THEME_NAME', 'm7red-nodo' ); // Theme name.
 define( 'THEME_PREFIX', 'm7red_'); // Theme prefix.
-define( 'M7RED_VERSION', '2015.06.27' ); // Theme version.
+define( 'M7RED_VERSION', '2015.07.01' ); // Theme version.
 define( 'CHILD_THEME_NAME', 'm7red-nodo' ); // Child theme name.
 
 // Some constants and variables for universal use...

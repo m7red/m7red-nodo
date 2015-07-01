@@ -55,7 +55,6 @@ function theme_options_do_page() {
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false;
-
 	?>
 	<div class="wrap">
 		<?php screen_icon(); echo "<h2>" . wp_get_theme() . __( ' Theme Options', 'm7red' ) . "</h2>"; ?>
