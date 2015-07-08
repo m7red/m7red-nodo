@@ -4,7 +4,7 @@
     Description: m7red es un grupo de investigaci&oacute;n y activismo independiente enfocado en la descripci&oacute;n y traducci&oacute;n colectivas de escenarios urbanos complejos. Y una iniciativa de Mauricio Corbalan y Pio Torroja que comenz&oacute; en Buenos Aires el a&ntilde;o 2005.
     Author: <a href="mailto:corbalan.mauricio@gmail.com">Mauricio Corbalan</a>&nbsp;y&nbsp;<a href="mailto:piotorroja@gmail.com">Pio Torroja</a>
     Author URI: http://www.m7red.info
-    Version: 2015.07.01
+    Version: 2015.07.08
     Template: imbalance2
     License: GPL-2.0+
     License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -341,13 +341,75 @@ textarea,
     background: #ffffff;
     height: 400px;
     width: 100%;
+    border-style: none;
+/*
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border: 1px solid #e5e5e5;
+ */
 }
 
-.graph-legend-box-regions {
+#graph_legend_container {
+  position: relative;
+  top: 70px !important;
+  bottom: 0;
+  height: 100%;
+  width: 195px;
+  background-color: transparent;
+  color: #ffffff
+}
+
+.graph-legend-box-header {
+  background: #666666;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  text-align: left;
+}
+
+.graph-refresh-btn-box {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-right: 0;
+  padding-left: 0;
+  display: block;
+  float: right;
+}
+
+.box-shell {
+  width: 100%;
+  height: 400px;
+  margin: 0;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 1px solid #e5e5e5;
+}
+
+.box-left
+{
+  float:left;
+  width: 760px;
+  height: 100%
+  margin: 0;
+}
+
+.box-right
+{
+  float:right;
+  width: 200px;
+  height: 100%
+  margin: 0;
+}
+
+.graph-legend-box-tags {
   height: 155px;
   margin-top: 0;
   display: block;
@@ -359,30 +421,40 @@ textarea,
   color: #ffffff;
 }
 
-.graph-legend-box-regions li {
+.graph-legend-box-tags li {
   margin: 2px 0;
 }
 
-.graph-legend-box-regions ul {
+.graph-legend-box-tags ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   text-align: left;
 }
 
-.graph-legend-box-regions ul a {
+.graph-legend-box-tags ul a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.graph-legend-box-regions ul a:hover {
+.graph-legend-box-tags ul a:hover {
   color: #ffffff;
   text-decoration: none;
 }
 
-.graph-legend-box-regions ul a:visited {
+.graph-legend-box-tags ul a:visited {
   color: #ffffff;
   text-decoration: none;
+}
+
+.highlight-list-item {
+  font-weight: bold;
+  background: #333333;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 
 /*  h2 {

@@ -1,5 +1,5 @@
 <?php
-/** Slight modification: theme original file is overwritten with this copy. */
+/** Slight modification by m7red-nodo: theme's original file is overwritten with this copy. */
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -242,7 +242,17 @@ jQuery(document).ready( function() {
             echo $cat_legend.'</div>';
         ?>
         <div style="clear:both"></div>
-        <?php m7red_set_graph_container(); // Set the graphics container on front page. ?>
+
+        <div class="box-shell">
+          <div class="box-left">
+            <?php m7red_set_graph_container(); // Set the graphics container on front page. ?>
+          </div>
+          <div class="box-right">
+            <?php m7red_show_legend_container('graph'); ?>
+          </div>
+        </div>
+
+        <div style="clear:both"></div>
 
         <?php // Hidden fields used in javascript routines. ?>
         <input type="hidden" name="the_site_url" id="the_site_url" value="<?php echo M7RED_SITE_URL ?>"/>

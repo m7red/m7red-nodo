@@ -1,5 +1,5 @@
 <?php
-/** Slight modification: theme original file is overwritten with this copy. */
+/** Slight modification by m7red-nodo: theme's original file is overwritten with this copy. */
 get_header(); ?>
 <div id="content">
     <?php get_template_part( 'loop', 'single' ); ?>

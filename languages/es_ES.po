@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: m7red v0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-17 10:41+0100\n"
-"PO-Revision-Date: 2015-04-17 10:45+0100\n"
+"POT-Creation-Date: 2015-07-06 11:59+0200\n"
+"PO-Revision-Date: 2015-07-06 12:02+0200\n"
 "Last-Translator: andrece <andreas.hempfling@gmail.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -11,13 +11,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.8.2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
-"X-Poedit-Basepath: ../\n"
+"X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: archive.php:10
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr ""
+
+#: archive.php:12
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr ""
+
+#: archive.php:14
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr ""
+
+#: archive.php:16
+msgid "Blog Archives"
+msgstr ""
 
 # @ m7red
 # @ imbalance2
@@ -27,21 +46,21 @@ msgid "%s"
 msgstr "%s"
 
 # @ m7red
-#: functions.php:385
+#: functions.php:387
 #, php-format
 msgid "<span class=\"meta-sep\">por</span> %1$s"
 msgstr "<span class=\"meta-sep\">por</span> %1$s"
 
 # @ m7red
 # @ imbalance2
-#: functions.php:396
+#: functions.php:398
 #, php-format
 msgid "%1$s"
 msgstr "%1$s"
 
 # @ m7red
 # @ imbalance2
-#: functions.php:398
+#: functions.php:400
 #, php-format
 msgid ""
 "Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark"
@@ -50,25 +69,25 @@ msgstr ""
 "Marca el <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark"
 "\">enlace permanente</a>."
 
-#: functions.php:454
+#: functions.php:456
 msgid "m7red espec&iacute;fico"
 msgstr "m7red espec&iacute;fico"
 
 # @ m7red
-#: functions.php:462
+#: functions.php:464
 msgid "Eslogan"
 msgstr "Eslogan"
 
-#: functions.php:463
+#: functions.php:465
 msgid "T&iacute;tulo de entrada para la visualizaci&oacute;n gr&aacute;fica."
 msgstr "T&iacute;tulo de entrada para la visualizaci&oacute;n gr&aacute;fica."
 
 # @ default
-#: functions.php:478 functions.php:505
+#: functions.php:480 functions.php:507
 msgid "Color del nodo"
 msgstr "Color del nodo"
 
-#: functions.php:480 functions.php:509
+#: functions.php:482 functions.php:511
 msgid ""
 "Color de la categor&iacute;a para la visualizaci&oacute;n gr&aacute;fica. "
 "Introducci&oacute;n manual es hexadecimal, por ejemplo #FF0000 es un tono de "
@@ -78,11 +97,11 @@ msgstr ""
 "Introducci&oacute;n manual es hexadecimal, por ejemplo #FF0000 es un tono de "
 "rojo."
 
-#: functions.php:484 functions.php:515
+#: functions.php:486 functions.php:517
 msgid "Tama&ntilde;o del nodo"
 msgstr "Tama&ntilde;o del nodo"
 
-#: functions.php:496
+#: functions.php:498
 msgid ""
 "Seleccione el tama&ntilde;o en p&iacute;xeles que desea. Nodos se visualizan "
 "como c&iacute;rculos."
@@ -91,65 +110,70 @@ msgstr ""
 "como c&iacute;rculos."
 
 # @ default
-#: functions.php:531
+#: functions.php:533
 msgid ""
 "Seleccione el tamaño en píxeles que desea. Nodos se visualizan como círculos."
 msgstr ""
 "Seleccione el tamaño en píxeles que desea. Nodos se visualizan como círculos."
 
 # @ default
-#: functions.php:596
+#: functions.php:598
 #, php-format
 msgid "Ver todas las entradas por %s"
 msgstr "Ver todas las entradas por %s"
 
 # @ default
-#: functions.php:607
+#: functions.php:609
 #, php-format
 msgid "Ver todas las entradas en %s"
 msgstr "Ver todas las entradas en %s"
 
 # @ m7red
-#: functions.php:1106
+#: functions.php:1108
 msgid "Entradas relacionadas"
 msgstr "Entradas relacionadas"
 
 # @ default
 # @ m7red
-#: functions.php:1216 lib/related_posts_widget.php:93
+#: functions.php:1218 lib/related_posts_widget.php:93
+#: lib/slimscroll/related_posts_widget.php:93
 msgid "Posts"
 msgstr "Entradas"
 
 # @ m7red
-#: functions.php:1265
+#: functions.php:1267
 msgid "relacionadas"
 msgstr "relacionadas"
 
 # @ m7red
-#: functions.php:1279 functions.php:1283
+#: functions.php:1281 functions.php:1285
 msgid ""
 "Utilice el buscador de abajo para seleccionar las entradas relacionadas."
 msgstr ""
 "Utilice el buscador de abajo para seleccionar las entradas relacionadas."
 
 # @ m7red
-#: functions.php:1288
+#: functions.php:1290
 msgid "buscar entradas"
 msgstr "buscar entradas"
 
-#: functions.php:1289
+#: functions.php:1291
 msgid "t&iacute;tulo"
 msgstr "t&iacute;tulo"
 
 # @ m7red
-#: functions.php:1289
+#: functions.php:1291
 msgid "contenido"
 msgstr "contenido"
 
 # @ m7red
-#: functions.php:1289
+#: functions.php:1291
 msgid "ambos"
 msgstr "ambos"
+
+#: functions.php:1642
+msgid "Tags"
+msgstr "Etiquetas"
 
 # @ m7red
 # @ imbalance2
@@ -499,12 +523,12 @@ msgstr "defecto"
 # @ default
 #: lib/metabox/init.php:245
 msgid "Select Color"
-msgstr ""
+msgstr "Seleccionar un color"
 
 # @ default
 #: lib/metabox/init.php:246
 msgid "Current Color"
-msgstr ""
+msgstr "Color actual"
 
 # @ cmb
 #: lib/metabox/init.php:1185
@@ -512,78 +536,84 @@ msgid "Save"
 msgstr "guardar"
 
 # @ m7red
-#: lib/related_posts_widget.php:8
+#: lib/related_posts_widget.php:8 lib/slimscroll/related_posts_widget.php:8
 msgid "Display related posts as a widget"
 msgstr ""
 
 # @ m7red
-#: lib/related_posts_widget.php:9
+#: lib/related_posts_widget.php:9 lib/slimscroll/related_posts_widget.php:9
 msgid "m7red Related Posts"
 msgstr "m7red entradas relacionadas"
 
 # @ m7red
-#: lib/related_posts_widget.php:79
+#: lib/related_posts_widget.php:79 lib/slimscroll/related_posts_widget.php:79
 msgid "m7red Related posts"
 msgstr "m7red entradas relacionadas"
 
 # @ m7red
-#: lib/related_posts_widget.php:79
+#: lib/related_posts_widget.php:79 lib/slimscroll/related_posts_widget.php:79
 msgid "None"
 msgstr "ninguno"
 
 # @ default
-#: lib/related_posts_widget.php:88
+#: lib/related_posts_widget.php:88 lib/slimscroll/related_posts_widget.php:88
 msgid "Title:"
 msgstr "Título:"
 
 # @ m7red
-#: lib/related_posts_widget.php:89
+#: lib/related_posts_widget.php:89 lib/slimscroll/related_posts_widget.php:89
 msgid "Post type to display:"
-msgstr ""
+msgstr "tipo de entrada para mostrar:"
 
 # @ m7red
-#: lib/related_posts_widget.php:92
+#: lib/related_posts_widget.php:92 lib/slimscroll/related_posts_widget.php:92
 msgid "All"
 msgstr "Todo"
 
 # @ m7red
-#: lib/related_posts_widget.php:94
+#: lib/related_posts_widget.php:94 lib/slimscroll/related_posts_widget.php:94
 msgid "Pages"
 msgstr "Páginas"
 
 # @ m7red
 #: lib/related_posts_widget.php:100
+#: lib/slimscroll/related_posts_widget.php:100
 msgid "If there are no related posts:"
 msgstr ""
 
 # @ m7red
 #: lib/related_posts_widget.php:101
+#: lib/slimscroll/related_posts_widget.php:101
 msgid "Hide the entire widget"
 msgstr ""
 
 # @ m7red
 #: lib/related_posts_widget.php:102
+#: lib/slimscroll/related_posts_widget.php:102
 msgid "Show this text:"
 msgstr ""
 
 # @ default
 #: lib/related_posts_widget.php:104
+#: lib/slimscroll/related_posts_widget.php:104
 msgid "Display thumbnail with related posts:"
 msgstr ""
 
 # @ m7red
 #: lib/related_posts_widget.php:105
+#: lib/slimscroll/related_posts_widget.php:105
 msgid "Show thumbnail"
 msgstr ""
 
 # @ default
 #: lib/related_posts_widget.php:106
+#: lib/slimscroll/related_posts_widget.php:106
 msgid "Thumbnail size:"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: loop-single.php:37
+#: loop-single.php:43
 #, php-format
 msgid "One Comment"
 msgid_plural "%1$s Comments"
@@ -592,36 +622,36 @@ msgstr[1] ""
 
 # @ m7red
 # @ imbalance2
-#: loop-single.php:56
+#: loop-single.php:65
 msgid "Pages:"
 msgstr "Páginas:"
 
 # @ m7red
 # @ imbalance2
-#: loop-single.php:68
+#: loop-single.php:77
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: loop-single.php:77
+#: loop-single.php:86
 msgid "Edit"
 msgstr "Editar"
 
 # @ m7red
 # @ imbalance2
-#: loop-single.php:124 loop-single.php:139 loop.php:27 loop.php:42
+#: loop-single.php:127 loop-single.php:142 loop.php:25 loop.php:40
 msgid "No comments"
 msgstr "no hay comentarios"
 
 # @ m7red
-#: loop-single.php:124 loop-single.php:139 loop.php:27 loop.php:42
+#: loop-single.php:127 loop-single.php:142 loop.php:25 loop.php:40
 msgid "One comment"
 msgstr "un comentario"
 
 # @ m7red
-#: loop-single.php:124 loop-single.php:139 loop.php:27 loop.php:42
+#: loop-single.php:127 loop-single.php:142 loop.php:25 loop.php:40
 #, php-format
 msgid "% comments"
 msgstr "% comentarios"
@@ -642,54 +672,54 @@ msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: loop.php:56 loop.php:90
+#: loop.php:53 loop.php:87
 msgid "Load more posts"
 msgstr ""
 
-#: options.php:40
+#: options.php:39
 msgid " Configuración (ahora sólo disponible en inglés)"
 msgstr ""
 
 # @ default
-#: options.php:45
+#: options.php:44
 msgid ""
 "Various settings and modes for textual and visual representation of related "
 "posts."
 msgstr ""
 
-#: options.php:50
+#: options.php:49
 msgid "Textual Representation"
 msgstr ""
 
 # @ m7red
-#: options.php:55
+#: options.php:54
 msgid ""
 "Should related posts be reciprocal? If so, the link will appear on both "
 "pages. If not, it will only appear on the post/page where it was selected."
 msgstr ""
 
 # @ m7red
-#: options.php:61
+#: options.php:60
 msgid "Yes, include the link on both pages."
 msgstr ""
 
 # @ m7red
-#: options.php:67
+#: options.php:66
 msgid "No, only show the link on one page."
 msgstr ""
 
 # @ m7red
-#: options.php:73
+#: options.php:72
 msgid "What title for related posts should be displayed?"
 msgstr ""
 
 # @ m7red
-#: options.php:79
+#: options.php:78
 msgid "Using HTML header element"
 msgstr ""
 
 # @ m7red
-#: options.php:95
+#: options.php:94
 msgid ""
 "<strong>Note:</strong> if you choose to display different post types as "
 "seperate lists, you can place <strong>%posttype%</strong> in the title to "
@@ -697,81 +727,81 @@ msgid ""
 msgstr ""
 
 # @ m7red
-#: options.php:100
+#: options.php:99
 msgid "What should be displayed when there are no related posts?"
 msgstr ""
 
 # @ m7red
-#: options.php:106
+#: options.php:105
 msgid "Nothing"
 msgstr "nada"
 
 # @ m7red
-#: options.php:112
+#: options.php:111
 msgid "Show this text"
 msgstr ""
 
 # @ m7red
-#: options.php:119
+#: options.php:118
 msgid "Would you like to display thumbnails with your related posts?"
 msgstr ""
 
 # @ m7red
-#: options.php:126
+#: options.php:125
 msgid "Yes, display thumbnails with this size:"
 msgstr ""
 
 # @ m7red
-#: options.php:141
+#: options.php:140
 msgid "No"
 msgstr "No"
 
 # @ m7red
-#: options.php:152
+#: options.php:151
 msgid "How would you like to order your related posts?"
 msgstr ""
 
 # @ m7red
-#: options.php:159
+#: options.php:158
 msgid "Manually"
 msgstr ""
 
 # @ m7red
-#: options.php:165
+#: options.php:164
 msgid "Automatically"
 msgstr "automáticamente"
 
 # @ m7red
-#: options.php:170
+#: options.php:169
 msgid "by date, new to old"
 msgstr ""
 
 # @ m7red
-#: options.php:174
+#: options.php:173
 msgid "by date, old to new"
 msgstr ""
 
 # @ m7red
-#: options.php:178
+#: options.php:177
 msgid "alphabetically A→Z"
 msgstr ""
 
 # @ m7red
-#: options.php:182
+#: options.php:181
 msgid "alphabetically Z→A"
 msgstr ""
 
 # @ m7red
-#: options.php:186
+#: options.php:185
 msgid "randomly"
 msgstr ""
 
-#: options.php:193
+#: options.php:192
 msgid "Visual Representation"
 msgstr ""
 
 # @ nsur
-#: options.php:198
+#: options.php:197
 msgid ""
 "Initalize graphics zoom factor. This have to be a value between 1 and 3. For "
 "example 1.2 or 1,4 are valid. You can use a dot or a comma as decimal sign. "
@@ -779,123 +809,128 @@ msgid ""
 msgstr ""
 
 # @ m7red
-#: options.php:206
+#: options.php:205
 msgid "How many posts (maximum number) should be displayed in graphics?"
 msgstr ""
 
 # @ m7red
-#: options.php:212
+#: options.php:211
 msgid "100"
 msgstr "100"
 
 # @ m7red
-#: options.php:218
+#: options.php:217
 msgid "200"
 msgstr "200"
 
 # @ m7red
-#: options.php:224
+#: options.php:223
 msgid "300"
 msgstr "300"
 
 # @ m7red
-#: options.php:230
+#: options.php:229
 msgid "400"
 msgstr "400"
 
 # @ m7red
-#: options.php:236
+#: options.php:235
 msgid "500"
 msgstr "500"
 
 # @ m7red
-#: options.php:242
+#: options.php:241
 msgid "all (This is not recommended and only useful for test purposes.)"
 msgstr ""
 
 # @ m7red
-#: options.php:248
+#: options.php:247
 msgid ""
 "The refresh cycle determines the time intervals in minutes at which a new "
 "file for displaying the graphics is stored."
 msgstr ""
 
 # @ m7red
-#: options.php:254
+#: options.php:253
 msgid "10 min"
 msgstr "10 min"
 
 # @ m7red
-#: options.php:260
+#: options.php:259
 msgid "20 min"
 msgstr "20 min"
 
 # @ m7red
-#: options.php:266
+#: options.php:265
 msgid "30 min"
 msgstr "30 min"
 
 # @ m7red
-#: options.php:272
+#: options.php:271
 msgid "60 min"
 msgstr "600"
 
 # @ m7red
-#: options.php:278
+#: options.php:277
 msgid "always (This is not recommended and only useful for test purposes.)"
 msgstr ""
 
-#: options.php:284
+#: options.php:283
 msgid ""
 "Safety threshold (minimum waiting period) in minutes when a new file shall "
 "be created. If set, it overrides a refresh cycle selection to \"always\" "
 "above."
 msgstr ""
 
-#: options.php:290
+#: options.php:289
 msgid "1 min"
 msgstr "1 min"
 
-#: options.php:296
+#: options.php:295
 msgid "2 min"
 msgstr "2 min"
 
-#: options.php:302
+#: options.php:301
 msgid "3 min"
 msgstr "3 min"
 
-#: options.php:308
+#: options.php:307
 msgid "4 min"
 msgstr "4 min"
 
-#: options.php:314
+#: options.php:313
 msgid "none (This is not recommended and only useful for test purposes.)"
 msgstr ""
 
 # @ m7red
-#: options.php:320
+#: options.php:319
 msgid "Guardar cambios"
 msgstr "Guardar cambios"
 
 # @ m7red
 # @ imbalance2
-#: search.php:10
+#: search.php:9
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: search.php:14
+#: search.php:13
 msgid "Nothing Found"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: search.php:16
+#: search.php:15
 msgid ""
 "Sorry, but nothing matched your search criteria. Please try again with some "
 "different keywords."
+msgstr ""
+
+#: tag.php:10
+#, php-format
+msgid "Posts Tagged '%s'"
 msgstr ""
 
 # @ m7red
@@ -930,115 +965,115 @@ msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:61
+#: theme-options.php:60
 msgid " Theme Options"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:64
+#: theme-options.php:63
 msgid "Options saved"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:73
+#: theme-options.php:72
 msgid "Navigation"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:91
+#: theme-options.php:90
 msgid "Choose page navigation type"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:95
+#: theme-options.php:94
 msgid "Color"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:106
+#: theme-options.php:105
 msgid "Select theme color"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:110
+#: theme-options.php:109
 msgid "Use images only"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:113
+#: theme-options.php:112
 msgid "For index page and related posts"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:117
+#: theme-options.php:116
 msgid "Related posts"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:120
+#: theme-options.php:119
 msgid "Enable related posts in Single page"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:124
+#: theme-options.php:123
 msgid "Font"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:142
+#: theme-options.php:141
 msgid "Choose font"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:146
+#: theme-options.php:145
 msgid "Google analytics"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:149
+#: theme-options.php:148
 msgid "Enter Google analytics code"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:153
+#: theme-options.php:152
 msgid "Favicon"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:156
+#: theme-options.php:155
 msgid "Enter favicon url, default will be used when value is not set"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:160
+#: theme-options.php:159
 msgid "Fluid grid"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:163
+#: theme-options.php:162
 msgid "Enable fluid grid"
 msgstr ""
 
 # @ m7red
 # @ imbalance2
-#: theme-options.php:170
+#: theme-options.php:169
 msgid "Save Options"
 msgstr "Guardar opciones"
 

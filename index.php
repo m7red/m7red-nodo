@@ -1,5 +1,5 @@
 <?php
-/** Slight modification: theme original file is overwritten with this copy. */
+/** Slight modification by m7red-nodo: theme's original file is overwritten with this copy. */
 ?>
 <?php get_header(); ?>
 		<div id="container">

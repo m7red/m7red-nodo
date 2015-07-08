@@ -13,7 +13,7 @@
 
 define( 'M7RED_THEME_NAME', 'm7red-nodo' ); // Theme name.
 define( 'THEME_PREFIX', 'm7red_'); // Theme prefix.
-define( 'M7RED_VERSION', '2015.07.01' ); // Theme version.
+define( 'M7RED_VERSION', '2015.07.08' ); // Theme version.
 define( 'CHILD_THEME_NAME', 'm7red-nodo' ); // Child theme name.
 
 // Some constants and variables for universal use...
@@ -428,10 +428,10 @@ function m7red_get_short_description_post_view() {
 /** Set the data visualization box on front page. */
 function m7red_set_graph_container() {
     if ( is_home() || is_front_page() || is_single() || is_category() || is_tag() ) {
-        echo '<div class="sigma-expand" id="graph_container"></div>';
+        echo '<div id="graph_container"></div>';
         echo '<div id="node-info" class="tooltip" style="display: none;"></div>';
         echo '<div style="float:right;">';
-        echo '<button id="graph-refresh-btn" class="clean-gray" style="width: 110px; margin-top: 10px;">reescalar grafo</button>&nbsp;';
+//         echo '<button id="graph-refresh-btn" class="clean-gray" style="width: 110px; margin-top: 10px;">reescalar grafo</button>&nbsp;';
         echo '</div>';
         echo '<div style="float:right;">';
 //         echo '<form name="sel_gtype" id="sel_gtype" style="color:#999999; margin-top:15px;">';
@@ -1616,4 +1616,111 @@ function m7red_get_all_categories() {
     }
     $result = $categories;
     return $result;
+}
+
+/** Get all tags with its links. */
+function m7red_get_tags($used_only=false) {
+  $result = null;
+  $tags = array();
+  $tags_ori = get_tags();
+  if (count($tags_ori) > 0) {
+    if ($used_only) { // only tags w/ posts.
+      foreach ($tags_ori as $tag) {
+        $post_ids = m7red_get_all_posts_by_tag($tag->slug);
+        if (count($post_ids) > 0) {
+          $tags[] = $tag;
+        }
+      }
+    }
+    else { // all defined tags, w/ and w/o posts.
+      $tags = $tags_ori;
+    }
+    foreach ($tags as $tag) {
+	    $tag_link = get_tag_link( $tag->term_id );
+	    $tag->link = $tag_link;
+	  }
+	  $result = $tags;
+  }
+
+  return $result;
+}
+
+/** Get all post ids by given tag */
+function m7red_get_all_posts_by_tag($tag_slug) {
+  $post_ids = array();
+  $args = array(
+	  'posts_per_page' => -1,
+    'tag' => $tag_slug,
+  );
+  $posts = get_posts($args);
+  foreach ($posts as $post) {
+    $post_ids[] = $post->ID;
+  }
+  return $post_ids;
+}
+
+/** Set tags container. */
+function m7red_show_legend_container($pane) {
+  $used_only = true;
+  $tags = m7red_get_tags($used_only);
+  echo '<div id="graph_legend_container">';
+    // Tags
+    echo '<div class="graph-legend-box-header"># '. __('Tags', 'm7red').'</div>';
+    echo '<div class="graph-legend-box-tags">';
+      if (!empty( $tags) && !is_wp_error($tags)) {
+        echo '<ul>';
+        foreach ($tags as $tag) {
+          echo '<li>#&nbsp;<a href="'.esc_url( $tag->link ).'">'.$tag->name.'</a></li>';
+        }
+        echo '</ul>';
+      }
+    echo '</div>';
+
+    // Refresh button.
+    if ($pane === 'graph') {
+      m7red_show_refresh_btn();
+    }
+  echo '</div>'; // end graph_legend_container
+}
+
+/** Set refresh button. */
+function m7red_show_refresh_btn() {
+  // Refresh graphics button.
+  echo '<div class="graph-refresh-btn-box">';
+    echo '<button id="graph-refresh-btn" class="clean-gray" style="width:195px;">reescalar grafo</button>&nbsp;';
+  echo '</div>';
+}
+
+/**
+ * Get single term slug
+ * Which is a forked function out of WordPress single_term_title().
+ * Found in http://wordpress.stackexchange.com/
+ * Thanks for sharing.
+ */
+function m7red_single_term_slug($prefix='', $display=true) {
+  $term = get_queried_object();
+  if (!$term) {
+    return;
+  }
+  if (is_category()) {
+    $term_slug = apply_filters('single_cat_slug', $term->slug);
+  }
+  elseif (is_tag()) {
+    $term_slug = apply_filters('single_tag_slug', $term->slug);
+  }
+  elseif (is_tax()) {
+    $term_slug = apply_filters('single_term_slug', $term->slug);
+  }
+  else {
+    return;
+  }
+  if (empty($term_slug)) {
+    return;
+  }
+  if ($display) {
+    echo $prefix . $term_slug;
+  }
+  else {
+    return $term_slug;
+  }
 }

@@ -1,5 +1,5 @@
 <?php
-/** Slight modification: theme original file is overwritten with this copy. */
+/** Slight modification by m7red-nodo: theme's original file is overwritten with this copy. */
 
 add_action( 'admin_init', 'theme_options_init' );
 add_action( 'admin_menu', 'theme_options_add_page' );

@@ -1,5 +1,5 @@
 <?php
-/** Slight modification: theme original file is overwritten with this copy. */
+/** Slight modification by m7red-nodo: theme's original file is overwritten with this copy. */
   if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="post_title" id="is_post">
         <h1 class="entry-title"><?php the_title(); ?></h1>
