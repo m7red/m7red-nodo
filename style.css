@@ -4,7 +4,7 @@
     Description: m7red es un grupo de investigaci&oacute;n y activismo independiente enfocado en la descripci&oacute;n y traducci&oacute;n colectivas de escenarios urbanos complejos. Y una iniciativa de Mauricio Corbalan y Pio Torroja que comenz&oacute; en Buenos Aires el a&ntilde;o 2005.
     Author: <a href="mailto:corbalan.mauricio@gmail.com">Mauricio Corbalan</a>&nbsp;y&nbsp;<a href="mailto:piotorroja@gmail.com">Pio Torroja</a>
     Author URI: http://www.m7red.info
-    Version: 2015.07.08
+    Version: 2015.07.09
     Template: imbalance2
     License: GPL-2.0+
     License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -409,7 +409,7 @@ textarea,
   margin: 0;
 }
 
-.graph-legend-box-tags {
+.graph-legend-box-processes {
   height: 155px;
   margin-top: 0;
   display: block;
@@ -421,28 +421,28 @@ textarea,
   color: #ffffff;
 }
 
-.graph-legend-box-tags li {
+.graph-legend-box-processes li {
   margin: 2px 0;
 }
 
-.graph-legend-box-tags ul {
+.graph-legend-box-processes ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   text-align: left;
 }
 
-.graph-legend-box-tags ul a {
+.graph-legend-box-processes ul a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.graph-legend-box-tags ul a:hover {
+.graph-legend-box-processes ul a:hover {
   color: #ffffff;
   text-decoration: none;
 }
 
-.graph-legend-box-tags ul a:visited {
+.graph-legend-box-processes ul a:visited {
   color: #ffffff;
   text-decoration: none;
 }

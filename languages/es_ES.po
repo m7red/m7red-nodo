@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: m7red v0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-06 11:59+0200\n"
-"PO-Revision-Date: 2015-07-06 12:02+0200\n"
+"POT-Creation-Date: 2015-07-09 16:52+0200\n"
+"PO-Revision-Date: 2015-07-09 16:55+0200\n"
 "Last-Translator: andrece <andreas.hempfling@gmail.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -19,48 +19,102 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: archive.php:10
-#, php-format
-msgid "Daily Archives: <span>%s</span>"
-msgstr ""
-
-#: archive.php:12
-#, php-format
-msgid "Monthly Archives: <span>%s</span>"
-msgstr ""
-
-#: archive.php:14
-#, php-format
-msgid "Yearly Archives: <span>%s</span>"
-msgstr ""
-
-#: archive.php:16
-msgid "Blog Archives"
-msgstr ""
-
 # @ m7red
 # @ imbalance2
-#: category.php:10
+#: archive.php:23 category.php:10
 #, php-format
 msgid "%s"
 msgstr "%s"
 
+#: archive.php:26
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Archivos diarios: %s"
+
+#: archive.php:28
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Archivos mensuales: %s"
+
+#: archive.php:28
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:30
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Archivos anuales: %s"
+
+#: archive.php:30
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:32
+msgid "Archives"
+msgstr "Archivos"
+
+#: functions.php:248
+msgid "Process"
+msgstr "Proceso"
+
+#: functions.php:249 functions.php:1772
+msgid "Processes"
+msgstr "Procesos"
+
+#: functions.php:258
+msgid "Search"
+msgstr "Buscar"
+
 # @ m7red
-#: functions.php:387
+#: functions.php:259 lib/related_posts_widget.php:92
+#: lib/slimscroll/related_posts_widget.php:92
+msgid "All"
+msgstr "Todo"
+
+#: functions.php:260 functions.php:261
+msgid "Parent"
+msgstr "Padre"
+
+# @ m7red
+# @ imbalance2
+#: functions.php:262 loop-single.php:86
+msgid "Edit"
+msgstr "Editar"
+
+#: functions.php:263
+msgid "Update"
+msgstr "Actualizar"
+
+#: functions.php:264
+msgid "Add new"
+msgstr "Añadir nuevo"
+
+#: functions.php:265
+msgid "New"
+msgstr "Nuevo"
+
+#: functions.php:265
+msgid "name"
+msgstr "nombre"
+
+# @ m7red
+#: functions.php:466
 #, php-format
 msgid "<span class=\"meta-sep\">por</span> %1$s"
 msgstr "<span class=\"meta-sep\">por</span> %1$s"
 
 # @ m7red
 # @ imbalance2
-#: functions.php:398
+#: functions.php:477
 #, php-format
 msgid "%1$s"
 msgstr "%1$s"
 
 # @ m7red
 # @ imbalance2
-#: functions.php:400
+#: functions.php:479
 #, php-format
 msgid ""
 "Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark"
@@ -69,25 +123,25 @@ msgstr ""
 "Marca el <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark"
 "\">enlace permanente</a>."
 
-#: functions.php:456
+#: functions.php:535
 msgid "m7red espec&iacute;fico"
 msgstr "m7red espec&iacute;fico"
 
 # @ m7red
-#: functions.php:464
+#: functions.php:543
 msgid "Eslogan"
 msgstr "Eslogan"
 
-#: functions.php:465
+#: functions.php:544
 msgid "T&iacute;tulo de entrada para la visualizaci&oacute;n gr&aacute;fica."
 msgstr "T&iacute;tulo de entrada para la visualizaci&oacute;n gr&aacute;fica."
 
 # @ default
-#: functions.php:480 functions.php:507
+#: functions.php:559 functions.php:586
 msgid "Color del nodo"
 msgstr "Color del nodo"
 
-#: functions.php:482 functions.php:511
+#: functions.php:561 functions.php:590
 msgid ""
 "Color de la categor&iacute;a para la visualizaci&oacute;n gr&aacute;fica. "
 "Introducci&oacute;n manual es hexadecimal, por ejemplo #FF0000 es un tono de "
@@ -97,11 +151,11 @@ msgstr ""
 "Introducci&oacute;n manual es hexadecimal, por ejemplo #FF0000 es un tono de "
 "rojo."
 
-#: functions.php:486 functions.php:517
+#: functions.php:565 functions.php:596
 msgid "Tama&ntilde;o del nodo"
 msgstr "Tama&ntilde;o del nodo"
 
-#: functions.php:498
+#: functions.php:577
 msgid ""
 "Seleccione el tama&ntilde;o en p&iacute;xeles que desea. Nodos se visualizan "
 "como c&iacute;rculos."
@@ -110,70 +164,66 @@ msgstr ""
 "como c&iacute;rculos."
 
 # @ default
-#: functions.php:533
+#: functions.php:612
 msgid ""
 "Seleccione el tamaño en píxeles que desea. Nodos se visualizan como círculos."
 msgstr ""
 "Seleccione el tamaño en píxeles que desea. Nodos se visualizan como círculos."
 
 # @ default
-#: functions.php:598
+#: functions.php:677
 #, php-format
 msgid "Ver todas las entradas por %s"
 msgstr "Ver todas las entradas por %s"
 
 # @ default
-#: functions.php:609
+#: functions.php:688
 #, php-format
 msgid "Ver todas las entradas en %s"
 msgstr "Ver todas las entradas en %s"
 
 # @ m7red
-#: functions.php:1108
+#: functions.php:1211
 msgid "Entradas relacionadas"
 msgstr "Entradas relacionadas"
 
 # @ default
 # @ m7red
-#: functions.php:1218 lib/related_posts_widget.php:93
+#: functions.php:1321 lib/related_posts_widget.php:93
 #: lib/slimscroll/related_posts_widget.php:93
 msgid "Posts"
 msgstr "Entradas"
 
 # @ m7red
-#: functions.php:1267
+#: functions.php:1370
 msgid "relacionadas"
 msgstr "relacionadas"
 
 # @ m7red
-#: functions.php:1281 functions.php:1285
+#: functions.php:1384 functions.php:1388
 msgid ""
 "Utilice el buscador de abajo para seleccionar las entradas relacionadas."
 msgstr ""
 "Utilice el buscador de abajo para seleccionar las entradas relacionadas."
 
 # @ m7red
-#: functions.php:1290
+#: functions.php:1393
 msgid "buscar entradas"
 msgstr "buscar entradas"
 
-#: functions.php:1291
+#: functions.php:1394
 msgid "t&iacute;tulo"
 msgstr "t&iacute;tulo"
 
 # @ m7red
-#: functions.php:1291
+#: functions.php:1394
 msgid "contenido"
 msgstr "contenido"
 
 # @ m7red
-#: functions.php:1291
+#: functions.php:1394
 msgid "ambos"
 msgstr "ambos"
-
-#: functions.php:1642
-msgid "Tags"
-msgstr "Etiquetas"
 
 # @ m7red
 # @ imbalance2
@@ -566,11 +616,6 @@ msgid "Post type to display:"
 msgstr "tipo de entrada para mostrar:"
 
 # @ m7red
-#: lib/related_posts_widget.php:92 lib/slimscroll/related_posts_widget.php:92
-msgid "All"
-msgstr "Todo"
-
-# @ m7red
 #: lib/related_posts_widget.php:94 lib/slimscroll/related_posts_widget.php:94
 msgid "Pages"
 msgstr "Páginas"
@@ -632,12 +677,6 @@ msgstr "Páginas:"
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
-
-# @ m7red
-# @ imbalance2
-#: loop-single.php:86
-msgid "Edit"
-msgstr "Editar"
 
 # @ m7red
 # @ imbalance2
@@ -928,7 +967,7 @@ msgid ""
 "different keywords."
 msgstr ""
 
-#: tag.php:10
+#: tag.php:14
 #, php-format
 msgid "Posts Tagged '%s'"
 msgstr ""
@@ -1076,6 +1115,12 @@ msgstr ""
 #: theme-options.php:169
 msgid "Save Options"
 msgstr "Guardar opciones"
+
+#~ msgid "processes"
+#~ msgstr "Procesos"
+
+#~ msgid "Tags"
+#~ msgstr "Etiquetas"
 
 # @ m7red
 # @ imbalance2

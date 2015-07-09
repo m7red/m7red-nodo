@@ -13,7 +13,7 @@
 
 define( 'M7RED_THEME_NAME', 'm7red-nodo' ); // Theme name.
 define( 'THEME_PREFIX', 'm7red_'); // Theme prefix.
-define( 'M7RED_VERSION', '2015.07.08' ); // Theme version.
+define( 'M7RED_VERSION', '2015.07.09' ); // Theme version.
 define( 'CHILD_THEME_NAME', 'm7red-nodo' ); // Child theme name.
 
 // Some constants and variables for universal use...
@@ -121,7 +121,17 @@ function m7red_child_theme_setup() {
     add_action('edited_category', 'save_category_metadata', 10, 1);
 
     // Determine relations between posts and categories for vizualization.
-    add_action('init', 'm7red_create_relations_graphical');
+//     add_action('init', 'm7red_create_relations_graphical');
+
+  // Register project specific taxonomies.
+  // Please note lower priority of 3 for nodosur_create_relations_graphical() as of
+  // 1 for nodosur_register_taxonomies().
+  // If taxonomies aren't registered, result of wp_get_post_terms() which is called in
+  // m7red_create_relations_graphical() causes an 'invalid taxonomy' wp_error.
+  add_action( 'init', 'm7red_register_taxonomies', 1);
+  add_action( 'init', 'm7red_create_relations_graphical', 3);
+
+
 
     // Set author information - Overwrite orginal theme function here.
     if ( ! function_exists( 'imbalance2_posted_by' ) ) {
@@ -227,6 +237,46 @@ function m7red_set_favicon_link() {
 /** Register widgets */
 function m7red_load_widgets() {
     register_widget( 'WP_Widget_M7red_Related_Posts' );
+}
+
+/** Create and register multiple taxonomies. */
+function m7red_register_taxonomies() {
+  $taxonomies = array(
+    // Add new «Processes» taxonomy to posts.
+    array(
+      'slug' => 'process',
+      'single_name' => __('Process', 'm7red'),
+      'plural_name' => __('Processes', 'm7red'),
+      'post_type' => 'post',
+    )
+  );
+
+  foreach( $taxonomies as $taxonomy ) {
+    $labels = array(
+      'name' => __($taxonomy['plural_name']),
+      'singular_name' => __($taxonomy['single_name']),
+      'search_items' => __('Search', 'm7red') . ' ' . lcfirst(__($taxonomy['plural_name'])),
+      'all_items' => __('All', 'm7red') . ' ' . lcfirst(__($taxonomy['plural_name'])),
+      'parent_item' => __('Parent', 'm7red') . ' ' . lcfirst(__($taxonomy['single_name'])),
+      'parent_item_colon' => __('Parent', 'm7red') . ' ' . lcfirst(__($taxonomy['single_name'])) . ':',
+      'edit_item' => __('Edit', 'm7red') . ' ' . lcfirst(__($taxonomy['single_name'])),
+      'update_item' => __('Update', 'm7red') . ' ' . lcfirst(__($taxonomy['single_name'])),
+      'add_new_item' => __('Add new', 'm7red') . ' ' . lcfirst(__($taxonomy['single_name'])),
+      'new_item_name' => __('New', 'm7red') .' '. lcfirst(__($taxonomy['single_name'])).' '. __('name'),
+      'menu_name' => __($taxonomy['plural_name'])
+    );
+
+    register_taxonomy( $taxonomy['slug'], $taxonomy['post_type'], array(
+      'hierarchical' => true,
+      'labels' => $labels,
+      'show_ui' => true,
+      'query_var' => true,
+      'public' => true,
+      'show_tagcloud' => true,
+      'show_in_nav_menus' => true,
+      'rewrite' => array( 'slug' => $taxonomy['slug'] )
+    ));
+  }
 }
 
 /** Deregister jquery */
@@ -360,6 +410,35 @@ function m7red_remove_editor_menu() {
     remove_action('admin_menu', '_add_themes_utility_last', 101);
 }
 
+/**
+ * Determine all associated post ids for a given custom taxonomy.
+ *
+ *
+ * @return array Post ids
+ */
+function m7red_get_all_posts_for_taxonomy($single_term_title, $taxonomy) {
+  // Get term.
+  $term = get_term_by('name', $single_term_title, $taxonomy);
+  // Preparate query.
+  $args = array(
+    'posts_per_page' => -1,       // all posts
+    'cache_results' => false,     // performance tuning
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'fields' => ids,              // we get only the ids
+    'tax_query' => array(         // where clause...
+      array(
+        'taxonomy' => $taxonomy,
+        'field' => 'slug',
+        'terms' => $term->slug
+      )
+    )
+  );
+  // Get all posts of given term.
+  $posts = get_posts($args);
+  return $posts;
+}
+
 /** Custom meta boxes for dealing with custom specific fields. */
 function m7red_initialize_cmb_meta_boxes() {
     if (!class_exists('cmb_Meta_Box')) {
@@ -427,7 +506,8 @@ function m7red_get_short_description_post_view() {
 
 /** Set the data visualization box on front page. */
 function m7red_set_graph_container() {
-    if ( is_home() || is_front_page() || is_single() || is_category() || is_tag() ) {
+    if ( is_home() || is_front_page() ||
+          is_single() || is_category() || is_tag() || is_tax() ) {
         echo '<div id="graph_container"></div>';
         echo '<div id="node-info" class="tooltip" style="display: none;"></div>';
         echo '<div style="float:right;">';
@@ -739,6 +819,27 @@ function m7red_create_relations_graphical($base) {
                 }
             }
 
+            // Get post processes.
+            $post_processes = '';
+            $post_processes_commasep = '';
+            $post_id = $post_entry->ID;
+            $processes = wp_get_post_terms($post_id, 'process', array("fields" => "names"));
+
+            if ($processes && !is_wp_error($processes)) {
+              $tmp_array = array();
+              foreach($processes as $process) {
+                $post_processes .= $process.' ';
+                $tmp_array[] = $process;
+              }
+              $post_processes_commasep = implode(', ', $tmp_array);
+              // There's a problem with selected taxonomy.
+            } elseif (is_wp_error($processes)) {
+              $post_processes_commasep = $processes->get_error_message();
+            } else {
+              $post_processes = ' ';
+              $post_processes_commasep = ' ';
+            }
+
             // Get post tags.
             $post_tags = '';
             $post_tags_commasep = '';
@@ -778,7 +879,7 @@ function m7red_create_relations_graphical($base) {
               $post_excerpt = '---'; // No text available in post.
             }
 
-            // Set tooltip content - title, category, tags, excerpt.
+            // Set tooltip content - title, category, processes, tags, excerpt.
             $excerpt =
               '<table style="border-collapse:collapse; color:#ffffff; width:250px">'
               .'<tr><td colspan="2" style="font-size:12px; font-weight:600; padding-bottom:3px">'
@@ -787,6 +888,9 @@ function m7red_create_relations_graphical($base) {
               .'<tr><td width="13px" style="vertical-align:middle;">'
                 .'<div class="cat_circle" style="padding:0; display:inline-block; background-color:'.$color.'">'
                 .'</div></td><td style="color:#e3e3e3; font-size:12px;">'.$cat_name
+              .'</td></tr>'
+              .'<tr><td colspan="2" style="color:#e3e3e3; font-size:10px;">'
+                .'&#35;&nbsp;&nbsp;'.$post_processes_commasep
               .'</td></tr>'
               .'<tr style="border-bottom:1px solid #727272;">'
                 .'<td colspan="2" style="padding-top:5px; padding-bottom:5px; color:#e3e3e3; font-size:10px;">'
@@ -1659,28 +1763,34 @@ function m7red_get_all_posts_by_tag($tag_slug) {
   return $post_ids;
 }
 
-/** Set tags container. */
+/** Set processes container. */
 function m7red_show_legend_container($pane) {
-  $used_only = true;
-  $tags = m7red_get_tags($used_only);
-  echo '<div id="graph_legend_container">';
-    // Tags
-    echo '<div class="graph-legend-box-header"># '. __('Tags', 'm7red').'</div>';
-    echo '<div class="graph-legend-box-tags">';
-      if (!empty( $tags) && !is_wp_error($tags)) {
-        echo '<ul>';
-        foreach ($tags as $tag) {
-          echo '<li>#&nbsp;<a href="'.esc_url( $tag->link ).'">'.$tag->name.'</a></li>';
-        }
-        echo '</ul>';
-      }
-    echo '</div>';
+    $cats = m7red_get_all_categories();
+    $processes = get_terms( 'process', array('orderby' => 'name', 'hide_empty' => true) );
 
-    // Refresh button.
-    if ($pane === 'graph') {
-      m7red_show_refresh_btn();
-    }
-  echo '</div>'; // end graph_legend_container
+    echo '<div id="graph_legend_container">';
+      // processes
+      echo '<div class="graph-legend-box-header"># '. __('Processes', 'm7red').'</div>';
+      echo '<div class="graph-legend-box-processes">';
+        if (!empty( $processes) && !is_wp_error($processes)) {
+          echo '<ul>';
+          foreach ($processes as $process) {
+            // $process is an object, so we don't need to specify the $taxonomy.
+            $process_link = get_term_link($process);
+            if (is_wp_error( $process_link ) ) {
+              continue;
+            }
+            echo '<li>#&nbsp;<a href="'.esc_url( $process_link ).'">'.$process->name.'</a></li>';
+          }
+          echo '</ul>';
+        }
+      echo '</div>';
+
+      // Refresh button.
+      if ($pane === 'graph') {
+        m7red_show_refresh_btn();
+      }
+    echo '</div>'; // end graph_legend_container
 }
 
 /** Set refresh button. */
@@ -1688,6 +1798,7 @@ function m7red_show_refresh_btn() {
   // Refresh graphics button.
   echo '<div class="graph-refresh-btn-box">';
     echo '<button id="graph-refresh-btn" class="clean-gray" style="width:195px;">reescalar grafo</button>&nbsp;';
+//     echo '<div class="graph-refresh-btn" id="graph-refresh-btn">reescalar grafo</div>';
   echo '</div>';
 }
 
