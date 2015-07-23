@@ -4,7 +4,7 @@
     Description: m7red es un grupo de investigaci&oacute;n y activismo independiente enfocado en la descripci&oacute;n y traducci&oacute;n colectivas de escenarios urbanos complejos. Y una iniciativa de Mauricio Corbalan y Pio Torroja que comenz&oacute; en Buenos Aires el a&ntilde;o 2005.
     Author: <a href="mailto:corbalan.mauricio@gmail.com">Mauricio Corbalan</a>&nbsp;y&nbsp;<a href="mailto:piotorroja@gmail.com">Pio Torroja</a>
     Author URI: http://www.m7red.info
-    Version: 2015.07.09
+    Version: 2015.07.23
     Template: imbalance2
     License: GPL-2.0+
     License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -82,7 +82,7 @@ blockquote { border-left-width: 3px; border-left-style: solid; margin-left: 7px;
 .clear { clear: both; }
 .main_separator { color: #dedfe0; }
 .wrapper { padding-top: 31px; }
-#header { border-bottom: 1px solid #dedfe0; padding-bottom: 50px; }
+#header { border-bottom: 1px solid #dedfe0; padding-bottom: 30px; }
 #site-title { float: left; width: 300px; padding-right: 40px; overflow: hidden; line-height: 27px; font-size: 23px; }
 #site-title a { color: #333; font-weight: bold; text-decoration: none; }
 #site-subtitle { float: left; width: 210px; padding-right: 40px; overflow: hidden; line-height: 25px; font-size: 18px; }
@@ -118,7 +118,7 @@ blockquote { border-left-width: 3px; border-left-style: solid; margin-left: 7px;
 #nav-above a { text-decoration: none; color: #333; }
 .nav-previous, .nav-next { display: inline; }
 .nav-separator { color: #e5e5e5; }
-.post_title { margin-top: 35px; overflow: hidden; }
+.post_title { margin-top: 25px; overflow: hidden; }
 .post_title h1 { margin: 0 0 10px 250px; font-size: 27px; line-height: 35px; width: 710px; }
 .entry-title, .page-title { margin-left: 250px; margin-top: 35px; }
 .entry-meta { margin-left: 250px; padding-bottom: 0; color: #636363; }
@@ -132,7 +132,7 @@ blockquote { border-left-width: 3px; border-left-style: solid; margin-left: 7px;
 .entry-tags span { font-weight: bolder; }
 #social { padding: 20px 0 0 0; }
 .twitter-share-button { float: left; margin: 2px 20px 0 0; }
-.post img, .page img { margin: 20px 0; }
+.post img, .page img { margin: 0 0; /* former 20px 0 */ }
 .post .alignleft, .page .alignleft { float: left; margin-right: 20px; }
 .post .alignright, .page .alignright { float: right; margin-left: 20px; }
 .post .aligncenter, .page .aligncenter { display: block; clear: both; margin: 20px auto; }
@@ -375,12 +375,55 @@ textarea,
 }
 
 .graph-refresh-btn-box {
+  position: relative;
   margin-top: 2px;
   margin-bottom: 2px;
   padding-right: 0;
   padding-left: 0;
   display: block;
   float: right;
+}
+
+#graph-refresh-btn {
+  background-image: url('images/reload-inactive.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px, cover;
+  background-color: transparent;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
+  border: none;
+/*
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  border-radius: 3px;
+ */
+  color: #333;
+}
+
+#graph-refresh-btn:hover {
+  background-image: url('images/reload-active.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px, cover;
+  background-color: transparent;
+  text-indent: -9999px;
+  border: none;
+/*
+  border: 1px solid #bbb;
+  border-bottom: 1px solid #999;
+  border-radius: 3px;
+ */
+  cursor: pointer;
+}
+
+#graph-refresh-btn:active {
+  border: none;
+/*
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #888;
+  -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+ */
 }
 
 .box-shell {
@@ -516,7 +559,7 @@ textarea,
     background-color:#505050;
     opacity:.7;
     color: #ffffff;
-    font-size:12px Arial;
+    font-size:22px Arial;
     border:1px solid #333;
     border-radius:5px;
 }
@@ -559,7 +602,54 @@ textarea,
  */
 }
 
-/* Category colored circles used in menu. */
+.processes_menu {
+  display:inline-block;
+  font-style: italic;
+  font-size: 14px;
+  margin-left:0;
+  margin-right:5px;
+  margin-bottom:5px;
+}
+
+.processes_menu a {
+  color:#303030;
+  text-decoration:none;
+}
+
+.processes_menu a:visited {
+  color:#303030;
+  text-decoration:none;
+}
+
+.processes_menu a:hover {
+  color:#303030;
+  text-decoration:none;
+}
+
+.categories_menu {
+  display:inline-block;
+  margin-top:5px;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom:5px;
+}
+
+.categories_menu a {
+  color:#303030;
+  text-decoration:none;
+}
+
+.categories_menu a:visited {
+  color:#303030;
+  text-decoration:none;
+}
+
+.categories_menu a:hover {
+  color:#303030;
+  text-decoration:none;
+}
+
+/* Category colored circles used in categories_menu. */
 .cat_circle {
     width: 10px;
     height: 10px;

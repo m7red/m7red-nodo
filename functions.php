@@ -13,7 +13,7 @@
 
 define( 'M7RED_THEME_NAME', 'm7red-nodo' ); // Theme name.
 define( 'THEME_PREFIX', 'm7red_'); // Theme prefix.
-define( 'M7RED_VERSION', '2015.07.09' ); // Theme version.
+define( 'M7RED_VERSION', '2015.07.23' ); // Theme version.
 define( 'CHILD_THEME_NAME', 'm7red-nodo' ); // Child theme name.
 
 // Some constants and variables for universal use...
@@ -348,6 +348,7 @@ function m7red_load_frontend_scripts() {
   wp_enqueue_script('jquery-masonry');
   wp_enqueue_script('jquery-ui-core');
   wp_enqueue_script('jquery-ui-tabs');
+  wp_enqueue_script('jquery-ui-tooltip');
 
 // Libraries from imbalance2. - Not used at present.
 //   wp_enqueue_script('jquery-infinitescroll', IMBALANCE2_LIBS_DIR.'/jquery.infinitescroll.min.js', '', '', true);
@@ -506,14 +507,14 @@ function m7red_get_short_description_post_view() {
 
 /** Set the data visualization box on front page. */
 function m7red_set_graph_container() {
-    if ( is_home() || is_front_page() ||
+    if ( is_home() || is_front_page() || is_page ||
           is_single() || is_category() || is_tag() || is_tax() ) {
         echo '<div id="graph_container"></div>';
         echo '<div id="node-info" class="tooltip" style="display: none;"></div>';
-        echo '<div style="float:right;">';
+//         echo '<div style="float:right;">';
 //         echo '<button id="graph-refresh-btn" class="clean-gray" style="width: 110px; margin-top: 10px;">reescalar grafo</button>&nbsp;';
-        echo '</div>';
-        echo '<div style="float:right;">';
+//         echo '</div>';
+//         echo '<div style="float:right;">';
 //         echo '<form name="sel_gtype" id="sel_gtype" style="color:#999999; margin-top:15px;">';
 //         if (is_home()) { // Set graphical selection possibility for home page only.
 //             echo '<input type="radio" name="gtype"  value="0" checked />force directed&nbsp;&nbsp;';
@@ -522,7 +523,7 @@ function m7red_set_graph_container() {
 //             echo '<input type="radio" name="gtype"  value="0" checked />force directed&nbsp;&nbsp;';
 //         }
 //         echo '</form>';
-        echo '</div>';
+//         echo '</div>';
     }
 }
 
@@ -1763,6 +1764,45 @@ function m7red_get_all_posts_by_tag($tag_slug) {
   return $post_ids;
 }
 
+//** Set categories menu */
+function m7red_set_categories_menu() {
+  $cats = m7red_get_all_categories();
+  $cat_legend = '<div class="categories_menu">';
+  foreach ($cats as $cat) {
+      if (strtolower($cat->name) == 'uncategorized' || strtolower($cat->name) == 'sin categoría' || (int)$cat->cat_ID == 1) { continue; }
+      $cat_href = '<a href="'.get_category_link( $cat->cat_ID ).'">'.$cat->name.'</a>';
+      $cat_legend .= '<div class="cat_circle" style="padding:0; display:inline-block; background-color:'.$cat->color.'"></div>&nbsp;'.$cat_href.'&nbsp;&nbsp;';
+  }
+  echo $cat_legend.'</div>';
+}
+
+//** Set processes menu */
+function m7red_set_processes_menu() {
+  $cats = m7red_get_all_categories();
+  $processes = get_terms( 'process', array('orderby' => 'name', 'hide_empty' => true) );
+  if (!empty( $processes) && !is_wp_error($processes)) {
+    $process_legend = '<div class="processes_menu">';
+    $is_first = true;
+    foreach ($processes as $process) {
+      // $process is an object, so we don't need to specify the $taxonomy.
+      $process_link = get_term_link($process);
+      if (is_wp_error( $process_link ) ) {
+        continue;
+      }
+      if ($is_first === true) {
+        $delimeter = '&nbsp;';
+        $is_first = false;
+      }
+      else {
+        $delimeter = '-';
+      }
+      $process_href = '<a href="'.esc_url( $process_link ).'">'.$process->name.'</a>';
+      $process_legend .= $delimeter.'&nbsp;'.$process_href.'&nbsp;';
+    } // end foreach
+    echo $process_legend.'</div>';
+  }
+}
+
 /** Set processes container. */
 function m7red_show_legend_container($pane) {
     $cats = m7red_get_all_categories();
@@ -1797,8 +1837,9 @@ function m7red_show_legend_container($pane) {
 function m7red_show_refresh_btn() {
   // Refresh graphics button.
   echo '<div class="graph-refresh-btn-box">';
-    echo '<button id="graph-refresh-btn" class="clean-gray" style="width:195px;">reescalar grafo</button>&nbsp;';
+//     echo '<button id="graph-refresh-btn" class="clean-gray" style="width:195px;">reescalar grafo</button>&nbsp;';
 //     echo '<div class="graph-refresh-btn" id="graph-refresh-btn">reescalar grafo</div>';
+    echo '<button id="graph-refresh-btn" title="reescalar grafo">reescalar grafo</button>&nbsp;';
   echo '</div>';
 }
 

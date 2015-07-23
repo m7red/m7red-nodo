@@ -33,7 +33,7 @@ get_header();
 						printf( __( 'Yearly Archives: %s', 'm7red' ), get_the_date( _x( 'Y', 'yearly archives date format', 'm7red' ) ) );
 					else :
 						_e( 'Archives', 'm7red' );
-					endif; ?>
+					endif; // endif is_tag() ||... ?>
 <?php
 	rewind_posts();
 	get_template_part( 'loop', 'archive' );

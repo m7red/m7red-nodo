@@ -231,16 +231,7 @@ jQuery(document).ready( function() {
 
         <input type="hidden" name="m7red_site_url" id="m7red_site_url" value="<?php echo M7RED_SITE_URL ?>"/>
 
-        <?php // Color legend on categories.
-            $cats = m7red_get_all_categories();
-            $cat_legend = '<div style="display:inline-block; margin-left:5px; margin-right:5px; margin-bottom:5px;">';
-            foreach ($cats as $cat) {
-                if (strtolower($cat->name) == 'uncategorized' || strtolower($cat->name) == 'sin categoría' || (int)$cat->cat_ID == 1) { continue; }
-                $cat_href = '<a href="'.get_category_link( $cat->cat_ID ).'" style="color:#303030; text-decoration:none;">'.$cat->name.'</a>';
-                $cat_legend .= '<div class="cat_circle" style="padding:0; display:inline-block; background-color:'.$cat->color.'"></div>&nbsp;'.$cat_href.'&nbsp;&nbsp;';
-            }
-            echo $cat_legend.'</div>';
-        ?>
+        <?php m7red_set_processes_menu(); ?>
         <div style="clear:both"></div>
 
         <div class="box-shell">
@@ -248,10 +239,13 @@ jQuery(document).ready( function() {
             <?php m7red_set_graph_container(); // Set the graphics container on front page. ?>
           </div>
           <div class="box-right">
-            <?php m7red_show_legend_container('graph'); ?>
+            <?php // m7red_show_legend_container('graph'); ?>
+            <?php m7red_show_refresh_btn(); ?>
           </div>
         </div>
+        <div style="clear:both"></div>
 
+        <?php m7red_set_categories_menu(); ?>
         <div style="clear:both"></div>
 
         <?php // Hidden fields used in javascript routines. ?>
